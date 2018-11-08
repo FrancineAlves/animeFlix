@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="Site para assistir Animes" content="">
+    <meta name="Francine e Mickael" content="">
+
+    <title>AnimeFlix</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../Bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../Bootstrap/navbar-top-fixed.css" rel="stylesheet">
+
+    <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <aside>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/imagens/logo.png" width="120">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-primary my-30 my-sm-0" data-toggle="modal" data-target="#login">Login</button>
+                </div>
+            </nav>
+        </aside>
+    </header>
+
+    <main role="main" class="container">
+        <section>
+            <form id="form-anime" class="needs-validation" novalidate>
+<div class="row">
+                <section class="col-md-4 form-group user-image" onclick="changeUserImage(event)">
+                    <img src="../assets/image/defaultuser.png" id="user-image" alt="Imagem do usuário">
+                    <span class="input-image">Alterar imagem</span>
+                    <input type="file" name="foto" accept="image/*" id="user-input-image">
+                </section>
+
+                <section class="col-md-8">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" name="nome" class="form-control" id="name" placeholder="Informe seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Cargo</label>
+                        <input type="text" name="descricao" class="form-control" id="description" placeholder="Informe o seu cargo">
+                    </div>
+                    <div class="form-group">
+                        <label for="tags">Habilidades</label>
+                        <input type="text" name="habilidades" id="tags" class="form-control" placeholder="Informe suas habilidades">
+                        <p id="skills-block" class="skills-block"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aboutme">Sobre mim</label>
+                        <textarea name="sobreMim" rows="5" class="form-control" id="aboutme" placeholder="Escreva um resumo sobre você..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Salvar</button>
+                </section>
+            </div>
+
+
+                <section class="col-md-4 form-group anime-image" onclick="changeUserImage(event)">
+                    <img src="../assets/imagens/defaultImage.png" id="anime-image" alt="Imagem do usuário">
+                    <span class="input-image">Alterar imagem</span>
+                    <input type="file" name="foto" accept="image/*" id="user-input-image">
+                </section>
+
+                <div class="form-group">
+                    <label for="nome">Título Anime</label>
+                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Informe o título...">
+                </div>
+                <div class="form-group">
+                    <label for="genero">Genero</label>
+                    <input type="text" class="form-control" name="genero" id="genero" placeholder="Informe os generos...">
+                </div>
+                <div class="form-group">
+                    <label for="qtdEpisodios">Quantidade Episódios</label>
+                    <input type="text" class="form-control" nome="qtdEpisodios" id="qtdEpisodios" placeholder="Informe a quantidade de episódios...">
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea class="form-control" nome="descricao" id="descricao" rows="3" placeholder="Descreva sobre o anime..."></textarea></textarea>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Bootstrap core JavaScript -->
+
+    <script src="../assets/js/animeFlix.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

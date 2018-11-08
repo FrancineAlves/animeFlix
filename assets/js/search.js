@@ -10,7 +10,6 @@ window.addEventListener('load', function() {
 });
 
 function searchButton(){
-
     var inputSearch = document.querySelector(".search input[type='text']");
     search(inputSearch);
 }
@@ -19,10 +18,8 @@ function search(searchText) {
     
     var searchResult = document.getElementById('search-result');
 
-    var animes = getProfileComponent(searchText);
     var animesHtml = '';
-
-    animesHtml += getProfileComponent(animes);
+    animesHtml += getProfileComponent(searchText);
 
     searchResult.innerHTML = animesHtml;
 }
