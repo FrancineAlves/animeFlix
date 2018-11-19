@@ -7,15 +7,17 @@ body{
     margin: 10px;
 }
 
+.row{
+    margin: 40px auto;
+}
+
 .anime-image {
-    height: 218px;
-    width: 218px;
     float: left;
     margin-right: 15px;
 }
 
 .anime-image img {
-    margin: 40px auto;
+    margin: 0px auto;
     height: 280px;
     width: 218px;
     border: 10px solid slategray;
