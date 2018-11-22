@@ -12,9 +12,11 @@ function addAnime(event) {
     currentAnime.qtdEpisodios = formulario.qtdEpisodios.value;
     currentAnime.descricao = formulario.descricao.value;
     
-    Anime.add(currentAnime);
+    id = Anime.add(currentAnime);
     toastr.success("O novo anime foi adicionado!", "Sucesso!");
     resetForm(formulario);
+
+    window.location.replace("./anime_addEpisodios.html?anime="+id);
 }
 
 function resetForm(formulario) {

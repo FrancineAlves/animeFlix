@@ -25,6 +25,8 @@ Anime.add = function(anime) {
     anime.id = Anime.generateID();
     animesList.push(anime);
     localStorage.setItem(senhaDoBanco, JSON.stringify(animesList) );
+
+    return anime.id;
 }
 
 Anime.getById = function(animeId) {

@@ -71,13 +71,45 @@
                         <label for="tags">Genero</label>
                         <p id="skills-block" class="skills-block"></p>
                     </div>
-                    <button type="button" class="btn btn-default">Editar</button>
-                    <button type="button" class="btn btn-default">Adicionar Episódio</button>
+                    <button type="button" class="btn btn-outline-primary">Editar</button>
+                    <button class="btn btn-outline-primary" data-toggle="modal" data-target="#addEpisodio">Adicionar Episódio</button>
                 </section>
             </div>
         </section>
     <main>
 
+<!-- Modal Login -->
+<div class="modal fade" id="addEpisodio" tabindex="-1" role="dialog" aria-labelledby="addEpisodio" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Adicionar Episódio</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-anime-episodio" novalidate onsubmit="addAnimeEpisodio(event)">
+                <label for="nome">Título do Episódio</label>
+              <input type="text" class="form-control" id="titulo" placeholder="Informe o título do episódio...">
+            </div>
+            <label for="nome">Arquivo Episódio</label>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+                <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+              </div>
+          </form>
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Salvar Episódio</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        
     <main class="container">
        <section class="table-responsive-sm">
             <table class="table table-striped">

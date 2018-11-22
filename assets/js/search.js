@@ -1,15 +1,13 @@
 window.addEventListener('load', function() {
-    var inputSearch = document.querySelector(".search input[type='text']");
-    //showAll();
-
-    var inputSearch = document.querySelector(".search input[type='text']");
-    inputSearch.onkeypress = function(event) {
-       if(event.keyCode == 13) {
-           event.stopPropagation();
-           event.preventDefault();
-           search(event.target.value);
-       }
-   }
+    showAll();
+    // var inputSearch = document.querySelector(".search input[type='text']");
+    // inputSearch.onkeypress = function(event) {
+    //     if(event.keyCode == 13) {
+    //         event.stopPropagation();
+    //         event.preventDefault();
+    //         search(event.target.value);
+    //     }
+    // }
 });
 
 function showAll() {
@@ -29,7 +27,9 @@ function showAll() {
 }
 
 function searchButton(){
-    var inputSearch = document.querySelector(".search input[type='text']");
+   // var inputSearch = document.querySelector(".search input[type='text']");
+    console.log(document.querySelector(".search input[type='text']"));
+    
     search(inputSearch);
 }
 
@@ -53,7 +53,7 @@ function search(searchText) {
 }
 
 function getAnimeComponent(anime) {
-    var defaultUser = '../assets/imagens/defaultImage.png';
+    var defaultUser = './assets/imagens/defaultImage.png';
     return `
     <div class="card" style="width: 12rem;">
         <img class="card-img-top" src="${anime.foto || defaultUser}" alt="${anime.titulo}">
