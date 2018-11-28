@@ -35,18 +35,8 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
+                            <a class="nav-link" href="../index.html">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
-                        </li>
-                    </ul>
-                    <button class="btn btn-outline-primary my-30 my-sm-0" data-toggle="modal" data-target="#login">Login</button>
                 </div>
             </nav>
         </aside>
@@ -90,20 +80,19 @@
         </div>
         <div class="modal-body">
           <form>
-            <div class="form-anime-episodio" novalidate onsubmit="addAnimeEpisodio(event)">
-                <label for="nome">Título do Episódio</label>
-              <input type="text" class="form-control" id="titulo" placeholder="Informe o título do episódio...">
+            <div class="form-anime-episodio" class="needs-validation" novalidate>
+               <label for="nome">Título do Episódio</label>
+               <input type="text" class="form-control" id="titulo" placeholder="Informe o título do episódio...">
             </div>
-            <label for="nome">Arquivo Episódio</label>
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
-                <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
-              </div>
+            <div class="form-anime-episodio" class="needs-validation" novalidate>
+                    <label for="nome">Link do Episódio</label>
+                    <input type="text" class="form-control" id="link" placeholder="Ex: www.youtube.com/xxxx/xxx">
+            </div>
           </form>
         </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Salvar Episódio</button>
+          <button type="submit" class="btn btn-primary"  onclick="addAnimeEpisodio(event)">Salvar Episódio</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Sair</button>
         </div>
       </div>
@@ -112,42 +101,8 @@
         
     <main class="container">
        <section class="table-responsive-sm">
-            <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Episódios</th>
-                        <th scope="col">Last</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>ASDasdpomaspodmaopsmdopamsdpomasopdm aposmdd aspdomasd asdpomm</td>
-                        <td>
-                            <ion-icon name="create"></ion-icon>
-                            <ion-icon name="trash"></ion-icon>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>
-                            <ion-icon name="create"></ion-icon>
-                            <ion-icon name="trash"></ion-icon>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>
-                                <ion-icon name="create"></ion-icon>
-                                <ion-icon name="trash"></ion-icon>
-                            </td>
-                      </tr>
-                    </tbody>
-                  </table>
-            </section>
+            <div id="result-episodios" class="row"></div>
+        </section>
     </main>
 
 
@@ -161,7 +116,9 @@
 
     <script src="../assets/js/animeFlix.js"></script>
     <script src="../assets/js/anime_dao.js"></script>
-    <script src="../assets/js/anime_details.js"></script>
+    <script src="../assets/js/animeEp_dao.js"></script>
+    <script src="../assets/js/FormularioEp.js"></script>
+    <script src="../assets/js/anime_add_details.js"></script>
 
 </body>
 

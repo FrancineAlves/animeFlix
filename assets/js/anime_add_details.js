@@ -12,7 +12,7 @@ window.addEventListener('load', function() {
     }
 
     renderSkills(currentAnime);
-    showEpisodioDetails();
+    showEpisodio();
 });
 
 function renderSkills(currentAnime) {
@@ -26,7 +26,8 @@ function renderSkills(currentAnime) {
     }).join('');
 }
 
-function showEpisodioDetails() {
+
+function showEpisodio() {
     var searchResult = document.getElementById('result-episodios');
     var cont=0;
 
@@ -38,16 +39,18 @@ function showEpisodioDetails() {
     if(animeId) {
         var animes = AnimeEp.get(animeId,cont);
         
-        this.video(animes[0].link);
-
-        var resultHtml = `<div class="list-group">
-                            <button type="button" class="list-group-item list-group-item-action active">
-                                Episódio
-                            </button>
-                            `
-
-        resultHtml = resultHtml + animes.map(getAnimeEpisodioComponentDetails).join('');
-        resultHtml = resultHtml + `</div>`
+        var resultHtml = `<table class="table table-striped">
+                              <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Episódios</th>
+                                    <th scope="col"></th>
+                                  </tr>
+                              </thead>
+                          <tbody>`
+        
+        resultHtml = resultHtml + animes.map(getAnimeEpisodioComponent).join('');
+        resultHtml = resultHtml + `</tbody></table>`
 
         showAfter(resultHtml);
     } else {
@@ -61,22 +64,16 @@ function showEpisodioDetails() {
     }
 }
 
-function getAnimeEpisodioComponentDetails(anime, cont) {
+function getAnimeEpisodioComponent(anime, cont) {
     cont++;
 
     return `
-    <button type="button" class="list-group-item list-group-item-action"  value="${anime.link}" onclick="video(value);">${cont} ${anime.titulo}</button>`
-}
-
-function video(link){
-    var searchResult = document.getElementById('result-video-episodios');
-    
-    var resultHtml = `<iframe width="910" height="500" src="${link}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-    showAfter(resultHtml);
-
-    function showAfter(elements) {
-        setTimeout(function() {
-            searchResult.innerHTML = elements;
-      }, 500);
-    }
+    <tr>
+        <th scope="row">${cont}</th>
+        <td>${anime.titulo}</td>
+        <td>
+        <a data-toggle="modal" data-target="#addEpisodio" data-cod="${anime.idEp}"><ion-icon name="create"></ion-icon></a>
+            <ion-icon name="trash"></ion-icon>
+        </td>
+    </tr>`
 }

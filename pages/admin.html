@@ -11,12 +11,12 @@
   <title>AnimeFlix</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="./Bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="../Bootstrap/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="./Bootstrap/navbar-top-fixed.css" rel="stylesheet">
+  <link href="../Bootstrap/navbar-top-fixed.css" rel="stylesheet">
 
-  <link href="./assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,9 +25,22 @@
     <aside>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">
-          <img src="assets/imagens/logo.png" width="120">
+          <img src="../assets/imagens/logo.png" width="120">
         </a>
-        <div class="collapse navbar-collapse" id="aside-menu"></div>
+        <div class="collapse navbar-collapse" id="aside-menu">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="./anime_form.html">Adicionar Anime</a>
+                </li>
+              </ul>
+              <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Pesquisar" aria-label="Search">
+                <button class="btn btn-outline-danger my-30 my-sm-0" type="submit" onclick="searchButton()">Pesquisar</button>
+                <span>
+                  <i class="fas fa-sliders-h"></i>
+                </span>
+              </form>
+        </div>
       </nav>
     </aside>
   </header>
@@ -79,12 +92,11 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-    
-    <script src="./assets/js/login.js"></script>
-    <script src="./assets/js/animeFlix.js"></script>
-    <script src="./assets/js/anime_dao.js"></script>
-    <script src="./assets/js/search.js"></script>
-    <script src="./assets/js/aside-menu.js"></script>
+
+    <script src="../assets/js/animeFlix.js"></script>
+    <script src="../assets/js/anime_dao.js"></script>
+    <script src="../assets/js/searchAdmin.js"></script>
+    <script src="../assets/js/login.js"></script>
 </body>
 
 </html>

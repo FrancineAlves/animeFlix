@@ -58,7 +58,7 @@ function getAnimeComponent(anime) {
     <div class="card" style="width: 12rem;">
         <img class="card-img-top" src="${anime.foto || defaultUser}" alt="${anime.titulo}">
         <div class="card-body">
-            <h6 class="title"><a href="./pages/anime_details.html?anime=${anime.id}">${anime.titulo}</a></h6>
+            <h6 class="title">${anime.titulo}<a href="./anime_addEpisodios.html?anime=${anime.id}">[Editar]</a></h6>
             <div class="genero">
                 ${getGeneroComponent(anime.generos)}
             </div>
