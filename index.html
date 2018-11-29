@@ -10,6 +10,7 @@
 
   <title>AnimeFlix</title>
 
+
   <!-- Bootstrap core CSS -->
   <link href="./Bootstrap/bootstrap.min.css" rel="stylesheet">
 
@@ -27,7 +28,25 @@
         <a class="navbar-brand" href="#">
           <img src="assets/imagens/logo.png" width="120">
         </a>
-        <div class="collapse navbar-collapse" id="aside-menu"></div>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+          <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Pesquisar" aria-label="Search">
+            <button class="btn btn-outline-danger my-30 my-sm-0" type="submit" onclick="searchButton()">Pesquisar</button>
+            <span>
+              <i class="fas fa-sliders-h"></i>
+            </span>
+          </form>
+          &nbsp;
+          <button class="btn btn-outline-primary my-30 my-sm-0" data-toggle="modal" data-target="#login">Login</button>
+          <button class="btn btn-outline-primary my-30 my-sm-0" data-toggle="modal" data-target="#registro"><a href="./pages/registro.html">Registrar</a></button>
+        </div>
       </nav>
     </aside>
   </header>

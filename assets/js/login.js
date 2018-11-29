@@ -29,10 +29,16 @@ function login(event){
     var formulario = document.forms[1];
 
     var done=0;
-
+    var loginsalvo = localStorage.getItem('loginsalvo');
+    var senhasalvo = localStorage.getItem('senhasalvo');
     if (formulario.email.value == "admin" && formulario.senha.value == "admin") {
         setCookie(formulario.email.value);
         window.location="./pages/admin.html";
+      done=1;
+    }
+    if (formulario.email.value == loginsalvo && formulario.senha.value == senhasalvo) {
+        setCookie(formulario.email.value);
+        window.location="./index.html";
       done=1;
     }
     if (done==0) { alert("Dados incorretos, tente novamente"); }  
